@@ -16,6 +16,26 @@ public class Main {
         // ejemploMapearModelMapperV2();
         // ejemploOrikaMapperV1();
         // ejemploOrikaMapperV2();
+        // ejemploMapStructV1();
+        ejemploMapstrcutV2();
+    }
+
+    private static void ejemploMapstrcutV2() {
+        /* Ejemplo de MapStruct v2 */
+        Persona persona = new Persona(
+                1L,
+                "Jhonayan",
+                "OS",
+                "jonmy@gmail.com",
+                (byte) 25,
+                'M');
+        System.out.println(persona.toString());
+        com.isai.mapstruct.dtos.PersonaCustumDto personaToPersonaCustumDto = PersonaMapper.INSTANCE
+                .personaToPersonaCustumDto(persona);
+        System.out.println(personaToPersonaCustumDto.toString());
+    }
+
+    private static void ejemploMapStructV1() {
         /* Ejemplo de MapStruct v1 */
         Persona persona = new Persona(
                 1L,
