@@ -14,7 +14,6 @@ public interface PersonaMapper {
 
     PersonaDefaultDto personaToPersonaDefaultDto(Persona persona);
 
-
     @Mapping(source = "id", target = "idDto")
     @Mapping(source = "nombre", target = "nombreDto")
     @Mapping(source = "apellido", target = "apellidoDto")
