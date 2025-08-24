@@ -1,6 +1,6 @@
 package com.isai.model_mapper.dtos;
 
-public class PersomaCustumDto {
+public class PersonaCustumDto {
     private Long idDto;
     private String nombreDto;
     private String apellidoDto;
@@ -8,8 +8,11 @@ public class PersomaCustumDto {
     private byte ageDto;
     private Character genderDto;
 
-    public PersomaCustumDto(Long idDto, String nombreDto, String apellidoDto, String emailDto, byte ageDto,
-            Character genderDto) {
+    public PersonaCustumDto() {
+    }
+
+    public PersonaCustumDto(Long idDto, String nombreDto, String apellidoDto, String emailDto, byte ageDto,
+                            Character genderDto) {
         this.idDto = idDto;
         this.nombreDto = nombreDto;
         this.apellidoDto = apellidoDto;
@@ -66,4 +69,15 @@ public class PersomaCustumDto {
         this.genderDto = genderDto;
     }
 
+    @Override
+    public String toString() {
+        return "PersonaCustumDto{" +
+                "idDto=" + idDto +
+                ", nombreDto='" + nombreDto + '\'' +
+                ", apellidoDto='" + apellidoDto + '\'' +
+                ", emailDto='" + emailDto + '\'' +
+                ", ageDto=" + ageDto +
+                ", genderDto=" + genderDto +
+                '}';
+    }
 }
